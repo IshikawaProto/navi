@@ -1,0 +1,46 @@
+" Navi Vim
+
+"" UI
+syntax on        " syntax highlighting
+set visualbell   " no beeps
+set noerrorbells " disable error bells
+set ruler        " cursor info
+set showcmd      " current cmd info
+set wildmenu     " cmd completion
+set modeline     " use modelines in files
+
+"" Behavior
+set noai                       " no autoindent
+set backspace=indent,eol,start " free delete 
+set expandtab                  " tab expands to spaces
+set tabstop=4                  " expand tabs as 4 spaces
+set shiftwidth=4               " << and >> shifts 4 spaces
+set shiftround                 "round to nearest shiftwidth
+set showmatch                  " highlight matching [{()}]
+set incsearch                  " highlight matching patterns
+
+"" Keymappings
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
+"" Pathogen
+call pathogen#infect()
+
+""" Airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1     " buffer list
+let g:airline#extensions#tabline#fnamemod = ':t' " filename for buffer name
+let g:airline_powerline_fonts = 1                " user powerline fonts
+
+""" Ctrlp
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+""" Nerdtree
+:nnoremap <C-n> :NERDTreeToggle<CR>
+
+""" Nordic Colors
+colorscheme nord 
