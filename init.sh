@@ -31,9 +31,5 @@ apt -y install \
     libyaml-dev \
     unzip
 
-## Python Basics
-apt install -y python-dev
-easy_install pip virtualenv virtualenvwrapper
-
 ## Fin
 apt -y autoremove
